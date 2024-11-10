@@ -1,0 +1,218 @@
+<!--This file is out checkout file. This holds all the basic information about checking out. We have where to ship the package to. 
+we also have the billing information. All of these values also only hold the correct value. For example you cannot enter integers into your
+name. Also formatted the expiration date to only hold certain amount of numbers using max and min.
+Author: Meagan
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - PayPath Payment</title>
+    <meta name="description" content="Payment methods">
+    <style>
+        #cartSummary {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+        #confirmationMessage {
+            display: none;
+            color: green;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            margin-right: 10px;
+            padding: 10px 15px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header_section">
+        <div class="container">
+            <h1>PayPath Payment - Checkout</h1>
+        </div>
+    </div>
+
+    <!--cart summary at the top-->
+    <div id="cartSummary">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <p><strong>Total Amount:</strong> $<span id="cartTotalAmount">0.00</span></p>
+    </div>
+
+    <!--back and clear cart buttons-->
+    <div class="button-container">
+        <button onclick="goBack()">Back</button>
+        <button onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <main id="container">
+        <div id="content" class="content">
+            <form id="paymentForm" class="form-horizontal">
+                <fieldset class="CreditCard">
+                    <legend>Payment Card Information</legend>
+
+                    <label for="NAME">Name on card:</label>
+                    <input name="NAME" required type="text" id="NAME" maxlength="30" pattern="[A-Za-z\s]+" title="Please enter letters only." autocomplete="off" /><br>
+
+                    <label for="CC_NUM_CONC">Card account number:</label>
+                    <input name="CC_NUM_CONC" required type="text" id="CC_NUM_CONC" maxlength="19" pattern="\d{13,19}" title="Please enter a valid card number." autocomplete="off" /><br>
+
+                    <label for="EX_MO">Expiration Month (MM):</label>
+                    <input name="EX_MO" required type="text" id="EX_MO" maxlength="2" pattern="^(0[1-9]|1[0-2])$" title="Please enter a valid month (01-12)." autocomplete="off" /><br>
+
+                    <label for="EX_YR">Expiration Year (YYYY):</label>
+                    <input name="EX_YR" required type="text" id="EX_YR" maxlength="4" pattern="^\d{4}$" title="Please enter a valid year." autocomplete="off" /><br>
+
+                    <label for="CVV">CVV:</label>
+                    <input name="CVV" required type="text" id="CVV" maxlength="4" pattern="\d{3,4}" title="Please enter a valid 3 or 4-digit CVV." autocomplete="off" /><br>
+                </fieldset>
+
+                <fieldset class="CreditCard external-wallet">
+                    <legend>Billing Address</legend>
+
+                    <label for="ADDRESS">Street Address:</label>
+                    <input name="ADDRESS" required type="text" id="ADDRESS" maxlength="50" pattern="[A-Za-z0-9\s,.-]+" title="Please enter a valid street address." autocomplete="off" /><br>
+
+                    <label for="CITY">City:</label>
+                    <input name="CITY" required type="text" id="CITY" maxlength="30" pattern="[A-Za-z\s]+" title="Please enter a valid city." autocomplete="off" /><br>
+
+                    <label for="STATE">State:</label>
+                    <select name="STATE" id="STATE" title="Please select a state" required>
+                        <option value="">--Please choose a state--</option>
+                        <option value="AL">Alabama (AL)</option>
+                        <option value="AK">Alaska (AK)</option>
+                        <option value="AZ">Arizona (AZ)</option>
+                        <option value="AR">Arkansas (AR)</option>
+                        <option value="CA">California (CA)</option>
+                        <option value="CO">Colorado (CO)</option>
+                        <option value="CT">Connecticut (CT)</option>
+                        <option value="DE">Delaware (DE)</option>
+                        <option value="FL">Florida (FL)</option>
+                        <option value="GA">Georgia (GA)</option>
+                        <option value="HI">Hawaii (HI)</option>
+                        <option value="ID">Idaho (ID)</option>
+                        <option value="IL">Illinois (IL)</option>
+                        <option value="IN">Indiana (IN)</option>
+                        <option value="IA">Iowa (IA)</option>
+                        <option value="KS">Kansas (KS)</option>
+                        <option value="KY">Kentucky (KY)</option>
+                        <option value="LA">Louisiana (LA)</option>
+                        <option value="ME">Maine (ME)</option>
+                        <option value="MD">Maryland (MD)</option>
+                        <option value="MA">Massachusetts (MA)</option>
+                        <option value="MI">Michigan (MI)</option>
+                        <option value="MN">Minnesota (MN)</option>
+                        <option value="MS">Mississippi (MS)</option>
+                        <option value="MO">Missouri (MO)</option>
+                        <option value="MT">Montana (MT)</option>
+                        <option value="NE">Nebraska (NE)</option>
+                        <option value="NV">Nevada (NV)</option>
+                        <option value="NH">New Hampshire (NH)</option>
+                        <option value="NJ">New Jersey (NJ)</option>
+                        <option value="NM">New Mexico (NM)</option>
+                        <option value="NY">New York (NY)</option>
+                        <option value="NC">North Carolina (NC)</option>
+                        <option value="ND">North Dakota (ND)</option>
+                        <option value="OH">Ohio (OH)</option>
+                        <option value="OK">Oklahoma (OK)</option>
+                        <option value="OR">Oregon (OR)</option>
+                        <option value="PA">Pennsylvania (PA)</option>
+                        <option value="RI">Rhode Island (RI)</option>
+                        <option value="SC">South Carolina (SC)</option>
+                        <option value="SD">South Dakota (SD)</option>
+                        <option value="TN">Tennessee (TN)</option>
+                        <option value="TX">Texas (TX)</option>
+                        <option value="UT">Utah (UT)</option>
+                        <option value="VT">Vermont (VT)</option>
+                        <option value="VA">Virginia (VA)</option>
+                        <option value="WA">Washington (WA)</option>
+                        <option value="WV">West Virginia (WV)</option>
+                        <option value="WI">Wisconsin (WI)</option>
+                        <option value="WY">Wyoming (WY)</option>
+                    </select><br>
+
+                    <label for="COUNTRY">Country:</label>
+                    <select name="COUNTRY" id="COUNTRY" title="Please select a country" required>
+                        <option value="">--Please choose a country--</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                    </select><br>
+
+                    <label for="ZIPCODE">Zip code:</label>
+                    <input name="ZIPCODE" required type="text" id="ZIPCODE" maxlength="10" pattern="^\d{5}(-\d{4})?$" title="Please enter a valid ZIP code." autocomplete="off" /><br>
+
+                    <label for="EMAIL_ADDR">Email address:</label>
+                    <input name="EMAIL_ADDR" required type="email" id="EMAIL_ADDR" maxlength="90" title="Please enter a valid email address." autocomplete="off" /><br>
+                </fieldset>
+
+                <!--submit button -->
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- confirmation message -->
+            <div id="confirmationMessage">Order Confirmed!</div>
+        </div>
+    </main>
+
+    <script>
+        //load cart from localStorage and display it at the top of the checkout page
+        function displayCartSummary() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartItemsContainer = document.getElementById("cartItems");
+            let cartTotalAmount = document.getElementById("cartTotalAmount");
+
+            //clear previous cart items display
+            cartItemsContainer.innerHTML = "";
+
+            let total = 0;
+
+            //display each item in the cart
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                //display item name, quantity, and total price
+                let itemElement = document.createElement("p");
+                itemElement.textContent = `${item.name} - ${item.quantity} x $${item.price.toFixed(2)} = $${itemTotal.toFixed(2)}`;
+                cartItemsContainer.appendChild(itemElement);
+            });
+
+            //display the total amount
+            cartTotalAmount.textContent = total.toFixed(2);
+        }
+
+        //call displayCartSummary on page load
+        window.onload = displayCartSummary;
+
+        //bcack button functionality
+        function goBack() {
+            window.history.back();
+        }
+
+        //clear cart functionality
+        function clearCart() {
+            localStorage.removeItem("cart"); //remove cart data from localStorage
+            displayCartSummary(); //fefresh the cart summary display
+            alert("Cart has been cleared.");
+        }
+
+        //javaScript to show confirmation message and prevent form submission refresh
+        document.getElementById("paymentForm").addEventListener("submit", function(event) {
+            event.preventDefault(); //prevents the form from submitting the traditional way
+            document.getElementById("confirmationMessage").style.display = "block"; //displays the confirmation message
+        });
+    </script>
+</body>
+</html>
