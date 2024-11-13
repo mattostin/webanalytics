@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Faith Bradley Official Store</title>
+      <link rel="stylesheet" href="style.css">
    </head>
    <body>
       <div class="header_section">
          <div class="container">
-            <div class="containt_main">
+            <div class="content_main">
+               <!-- Side navigation -->
+               <input type="checkbox" id="toggle-nav" class="toggle-nav">
                <div id="mySidenav" class="sidenav">
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <label for="toggle-nav" class="closebtn">&times;</label>
                   <a href="Main.html">Home</a>
                   <a href="Merch.html">Merch</a>
                   <a href="FAQs.html">FAQs</a>
                   <a href="Cart.html">Cart</a>
                   <a href="Checkout.html">Checkout</a>
                </div>
-               <span class="toggle_icon" onclick="openNav()"><img src="Img/toggle-icon.png"></span>
+               
+               <!-- Toggle button for side nav -->
+               <label for="toggle-nav" class="toggle_icon"><img src="Img/toggle-icon.png" alt="Toggle icon"></label>
+
+               <!-- Dropdown for categories -->
                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Category 
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <button class="btn btn-secondary dropdown-toggle" type="button">All Category</button>
+                  <div class="dropdown-menu">
                      <a class="dropdown-item" href="#">Action</a>
                      <a class="dropdown-item" href="#">Another action</a>
                      <a class="dropdown-item" href="#">Something else here</a>
                   </div>
                </div>
-<p>
-   Our mission is to celebrate the impact of inspiring educators by creating fun,
-    meaningful merchandise that captures the essence of their unique teaching style 
-    and unforgettable classroom moments. We aim to build a community where students, 
-    alumni, and fans can connect, share memories, and carry a lasting piece of their 
-    academic journey with them. Through high-quality, thoughtfully designed products,
-     we honor the professor-student relationship and keep the spirit of learning and 
-     laughter alive long after the final lecture.
-</p>
-      <header>
-      </header>
+
+               <!-- Mission statement -->
+               <p>
+                  Our mission is to celebrate the impact of inspiring educators by creating fun,
+                  meaningful merchandise that captures the essence of their unique teaching style 
+                  and unforgettable classroom moments. We aim to build a community where students, 
+                  alumni, and fans can connect, share memories, and carry a lasting piece of their 
+                  academic journey with them. Through high-quality, thoughtfully designed products,
+                  we honor the professor-student relationship and keep the spirit of learning and 
+                  laughter alive long after the final lecture.
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <!-- JavaScript to toggle side navigation -->
+      <script src="script.js"></script>
    </body>
 </html>
