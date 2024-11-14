@@ -1,0 +1,194 @@
+/* resetting the web page */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-list{
+  width: 50%;
+  display: flex;
+  align-items: center;
+
+}
+
+
+.nav-list li{
+  list-style: none;
+  padding: 26px 30px;
+
+
+}
+
+
+.nav-list li a{
+  text-decoration: none;
+  color: aliceblue;
+
+}
+
+.nav-list li a:hover{
+  color: grey;
+
+}
+
+.rightNav{
+  width: 50%;
+  text-align: right;
+}
+
+.logo{
+  width:40%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.logo img{
+  width: 30%;
+  border: 3px solid white;
+  border-radius: 50px;
+}
+
+#search {
+  padding: 5px;
+  font-size: 17px;
+  border: 2px solid grey;
+  border-radius: 9px;
+}
+
+.background{
+  background: rgba(0, 0, 0, 0.7) url('../Img/backgroundimage.webp');
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.lowerbody{
+  background: rgba(61, 57, 57, 0.774);
+  background-size: cover;
+  background-blend-mode: darken;
+  height: 100vh;
+
+
+}
+.box-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 80%;
+  margin:auto;
+  height: 80%;
+ 
+  }
+
+.firstSection{
+  height: 100vh;
+}
+
+.firstHalf{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* .secondHalf{
+  width: 30%;
+} */
+
+#prof2Img img{
+  width: 70%;
+  border: 4px solid rgb(63, 60, 60);
+  border-radius: 150px;
+  display:flex;
+  margin: auto;
+  
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Side Navigation Styles */
+/* .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#toggle-nav:checked + .sidenav {
+  width: 250px; 
+}
+
+.toggle_icon {
+  cursor: pointer;
+} */

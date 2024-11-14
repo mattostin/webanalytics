@@ -6,24 +6,67 @@ Author: Meagan -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- <header> -->
         <h1>Your Shopping Cart</h1>
-        <nav>
-            <a href="Main.html">Home</a> |
-            <a href="Merch.html">Merch</a> |
-            <a href="FAQs.html">FAQs</a> |
-            <a href="Checkout.html">Checkout</a>
-        </nav>
-    </header>
+        <nav class="navbar background">
+            <ul class="nav-list">
+               <div class="logo"><img src="Img/SP.png" alt="logo"></div>
+               <li><a href="Main.html">Home</a></li>
+               <li><a href="Merch.html">Merch</a></li>
+               <li> <a href="FAQs.html">FAQs</a></li>
+               <li><a href="Cart.html">Cart</a></li>
+               <li><a href="Checkout.html">Checkout</a></li>
+            </ul>
+      
+            <div class="rightNav">
+               <input type="text" name="search" id="search">
+               <button class="btn btn-sm">Search</button>
+            </div>
+      
+         </nav>
 
-    <section id="cartSection">
-        <div id="cartContents">
-        </div>
-        <div id="cartTotal">
-        </div>
+         <section class="lowerbody" id="cartSection">
+            
+            <div id="cartContents">Cart content</div>
+            
+            <div id="cartTotal">cart total
+            </div>
+         </section>
+
+
+         
+         <!-- <section class="background firstSection">
+            <div class="box-main">
+               <div class="firstHalf">
+                
+      
+                     </div>
+                     <div class="secondHalf">
+                       <img src="Img/prof2.jpg" alt="professor aesthetic image">  -->
+<!--            
+                    </div>
+      
+               </div> -->
+               <!-- <div class="secondHalf">
+                   <img src="Img/prof2.jpg" alt="professor aesthetic image"> 
+      
+               </div> -->
+      
+            <!-- </div>
+      
+         </section> --> 
+
+
+    <!-- </header> -->
+
+    <!-- <section id="cartSection">
+        <div id="cartContents">Cart content</div>
+        
+        <div id="cartTotal">cart total
+        </div> -->
     </section>
 
     <script src="script.js"></script>

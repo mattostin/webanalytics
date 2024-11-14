@@ -83,3 +83,15 @@ function removeFromCart(itemName) {
 window.onload = function() {
     updateCartDisplay();
 };
+
+//warisha changes 
+// JavaScript to control side navigation toggle
+document.getElementById('toggle-nav').addEventListener('change', function() {
+    var sidenav = document.getElementById('mySidenav');
+    if (this.checked) {
+      sidenav.style.width = '250px';  // Adjust this value as needed
+    } else {
+      sidenav.style.width = '0';
+    }
+  });
+  
