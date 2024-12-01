@@ -1,0 +1,132 @@
+/* cart-style.css */
+
+/* Styling for the cart container */
+.cart-container {
+  padding: 20px;
+  max-width: 80%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Playfair Display", serif;
+}
+
+.cart-container h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Cart item styling */
+.cart-contents {
+  margin-bottom: 30px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.cart-item span {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.cart-item button {
+  background-color: #5e91a0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-item button:hover {
+  background-color: #6d8fac;
+}
+
+/* Styling for the total section */
+.cart-total {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.cart-total span {
+  color: #333;
+  font-size: 1.2em;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .cart-container {
+      max-width: 95%;
+      padding: 15px;
+  }
+
+  .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .cart-item button {
+      margin-top: 10px;
+  }
+
+  .cart-total {
+      font-size: 1.3em;
+      text-align: center;
+  }
+}
+
+/* cart items pics */
+.product-image {
+  width: 100px;  
+  height: auto; 
+  margin-right: 10px; 
+  border-radius: 8px; 
+}
+
+/* Styling for the Checkout Button */
+.checkout-btn-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.checkout-btn {
+  background-color: #637e8d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #6d8fac;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9; 
+  text-align: center;
+  padding: 0px 0;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+  z-index: 10; /* Ensure it stays above other content */
+}

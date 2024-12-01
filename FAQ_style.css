@@ -1,0 +1,116 @@
+/* FAQ_style.css */
+
+/* Wrapper for page layout */
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+/* FAQ Section */
+.faq {
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* FAQ text styling */
+.faq p {
+    text-align: center;
+    font-size: larger;
+    margin: 10px 0; /* Add some margin for better spacing */
+}
+
+/* Image styling */
+.faq .img img {
+    max-width: 300px; 
+    height: auto; 
+    margin: 10px 0; /* Add some space around the image */
+}
+
+/* Sub-container for text and problems sections */
+#sub-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    justify-content: space-evenly; /* Distribute space evenly between text and problems */
+}
+
+/* Styling for text section */
+.text {
+    width: 50%;
+    padding: 4%;
+}
+
+/* Styling for problems section */
+.problems {
+    width: 50%;
+    padding: 4%;
+}
+
+/* Flex styling for problem items */
+.problems div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button in the problems section */
+.problems button {
+    align-self: flex-end;
+    margin: 10px 30px; /* Add space between the button and other content */
+}
+
+/* Textarea field for problems section */
+.textarea {
+    width: 95%;
+    max-width: 600px;
+    margin: 2%;
+    height: 200px;
+    cursor: pointer;
+    caret-color: #007BFF; 
+}
+
+/* Focus effect for textarea */
+.textarea:focus {
+    border: 2px solid #007BFF; /* Change border color when focused */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    /* Adjust text and problems sections for small screens */
+    .text, .problems {
+        width: 100%;  /* Set both sections to take full width on small screens */
+        padding: 10px; /* Add some padding for better spacing */
+    }
+
+    /* Stack FAQ content vertically on small screens */
+    .faq {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq p {
+        font-size: 1.2em;  /* Slightly larger text for readability */
+        margin: 10px 0;
+    }
+
+    /* Adjust problem divs */
+    .problems div {
+        margin-bottom: 20px; /* Add margin for better spacing between items */
+    }
+
+    /* Adjust image size for mobile */
+    .faq .img img {
+        max-width: 100%; /* Ensure images don't overflow the container */
+        margin-bottom: 20px;
+    }
+
+    /* Adjust the textarea and button styling */
+    .textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .problems button {
+        margin: 10px auto; /* Center the button for mobile devices */
+    }
+}

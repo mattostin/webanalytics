@@ -1,53 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    </head>
-    <body>
-        <p>
-            <strong>1. Who is Professor Bradley?</strong>
-            </p>
-            
-                <p>
-                Professor Faith Bradley is a faculty member at George Washington University,
-                 specializing in machine learning within the Columbian 
-                 College of Arts & Sciences. She is actively involved in 
-                 teaching and advancing data analytics to support global 
-                 decision-making. Her work often focuses on translating 
-                 complex data into practical tools that can help address
-                  broad societal challenges, aligning with GW's emphasis 
-                  on interdisciplinary solutions for real-world issues.
-                </p>
-            <p>
-            <strong>2. Why is there a fan* for Professor Bradley?</strong>
-            </p>
-            
-            <p>This web application exist because some educators 
-                leave a lasting impact on their students, inspiring 
-                admiration and a sense of community around their
-                 personalities, teaching styles, and expertise.
-                  Often, students feel a deep connection with 
-                  professors who are particularly engaging, funny,
-                   or passionate about their subjects, which can lead 
-                   to fan pages as a way to celebrate and share 
-                   experiences. These pages might feature memorable
-                    quotes, classroom anecdotes, or even humorous 
-                    content inspired by the professor's unique approach
-                     to teaching. Professor Bradley is one of those professors!</p>
-            
-            <p>
-            <strong>3. What if I still have questions?</strong>
-            </p>
-            
-          <div>
-                <form>
-                <label for="Question">What is your question?:</label><br>
-                <input type="text" id="Question" name="Question"><br>
-                <input class="button Question" type="Submit" id="Submit" value="Submit"  />
 
-              </form> 
-                 
-             
-              
-            </div>
-        </body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faith Bradley - Official Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="FAQ_style.css">
+</head>
+
+<body>
+  <!-- Making the navigation bar -->
+  <nav class="navbar background">
+    <ul class="nav-list">
+      <div class="logo"><img src="Img/SP.png" alt="logo"></div>
+      <li><a href="Main.html">Home</a></li>
+      <li><a href="Merch.html">Merch</a></li>
+      <li><a href="Cart.html">Cart</a></li>
+      <li><a href="Checkout.html">Checkout</a></li>
+      <li> <a href="FAQs.html">FAQs</a></li>
+
+    </ul>
+
+    <div class="rightNav">
+      <input type="text" name="search" id="search">
+      <button class="btn btn-sm">Search</button>
+    </div>
+
+  </nav>
+
+  <div class="wrapper">
+    <!--FAQ image  -->
+    <div class="faq">
+      <div>
+        <h1>FAQs</h1>
+        <p>Have Questions? You can find your answers here.<br> And ask your own questions!</p>
+      </div>
+
+      <div class="img">
+        <img src="Img/faq.png" alt="faq image">
+      </div>
+    </div>
+
+    <div id="sub-container">
+      <div class="text">
+        <h2>1. Who is Professor Bradley?</h2>
+        <p>
+          Professor Faith Bradley is a faculty member at George Washington University,
+          specializing in machine learning within the Columbian
+          College of Arts & Sciences. She is actively involved in
+          teaching and advancing data analytics to support global
+          decision-making. Her work often focuses on translating
+          complex data into practical tools that can help address
+          broad societal challenges, aligning with GW's emphasis
+          on interdisciplinary solutions for real-world issues.
+        </p>
+<br>
+        <h2>2. Why is there a fan* for Professor Bradley?</h2>
+        <p>This web application exist because some educators
+          leave a lasting impact on their students, inspiring
+          admiration and a sense of community around their
+          personalities, teaching styles, and expertise.
+          Often, students feel a deep connection with
+          professors who are particularly engaging, funny,
+          or passionate about their subjects, which can lead
+          to fan pages as a way to celebrate and share
+          experiences. These pages might feature memorable
+          quotes, classroom anecdotes, or even humorous
+          content inspired by the professor's unique approach
+          to teaching. Professor Bradley is one of those professors!</p>
+      </div>
+
+      <div class="problems">
+        <h2>What if I still have questions?</h2>
+        <h4>Submit your questions here:</h4>
+        <div>
+          <textarea name="question" id="question"></textarea>
+          
+          <button id="submitQuestion">Submit</button>
+         
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p class="text-footer background">
+      &copy; 2024 BeyondBradley - FAITH BRADLEY OFFICIAL STORE
+    </p>
+  </footer>
+
+  <script>
+    // Target the submit button
+    const submitButton = document.getElementById("submitQuestion");
+
+    // Add a click event listener
+    submitButton.addEventListener("click", function () {
+        // Target the textarea
+        const questionInput = document.getElementById("question");
+
+        // Check if the textarea is empty
+        if (questionInput.value.trim() === "") {
+            alert("Please type your question before submitting.");
+        } else {
+            // Display the thank-you alert
+            alert("Thank you for your question! Your response has been recieved:)");
+
+            // Clear the textarea after submission
+            questionInput.value = "";
+        }
+    });
+</script>
+
+ 
+</body>
+
 </html>

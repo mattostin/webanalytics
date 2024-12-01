@@ -1,201 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-    <script src="script.js"></script>
-   </head>
-   <body>
-  <div class="header_section">
-         <div class="container">
-            <div class="containt_main">
-               <div id="mySidenav" class="sidenav">
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="Main.html">Home</a>
-                  <a href="Merch.html">Merch</a>
-                  <a href="FAQs.html">FAQs</a>
-                  <a href="Cart.html">Cart</a>
-                  <a href="Checkout.html">Checkout</a>
-               </div>
-               <span class="toggle_icon" onclick="openNav()"><img src="toggle-icon.png"></span>
 
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Category 
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                     <a class="dropdown-item" href="#">Action</a>
-                     <a class="dropdown-item" href="#">Another action</a>
-                     <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-               </div>
-               <div class="main">
-                  <!-- Another variation with a button -->
-                  <div class="input-group">
-                     <input type="text" class="form-control" placeholder="Search here">
-                     <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
-                        <i class="fa fa-search"></i>
-                        </button>
-                     </div>
-                  </div>
-               </div>
-               <div class="header_box">
-                  <div class="lang_box ">
-                     <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
-                     <img src="flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom"> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
-                     </a>
+<head>
+   
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Faith Bradley - Official Store</title>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;500&display=swap"
+      rel="stylesheet">
+</head>
 
-                  </div>
-                  <div class="login_menu">
-                     <ul>
-                        <li><a href="#">
-                           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                           <span class="padding_10">Cart</span></a>
-                        </li>
-                     
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
+<body>
+   <!-- Making the navigation bar -->
+   <nav class="navbar background">
+      <ul class="nav-list">
+         <div class="logo"><img src="Img/SP.png" alt="logo"></div>
+         <li><a href="Main.html">Home</a></li>
+         <li><a href="Merch.html">Merch</a></li>
+         <li><a href="Cart.html">Cart</a></li>
+         <li><a href="Checkout.html">Checkout</a></li>
+         <li> <a href="FAQs.html">FAQs</a></li>
+      </ul>
+
+      <!-- search bar -->
+      <div class="rightNav">
+         <input type="text" name="search" id="search" placeholder="Search">
+         <button class="btn btn-sm">Search</button>
       </div>
-      <header>
-      </header>
+   </nav>
+<!-- enf of navigation bar -->
 
-      <!--Shirt1-->
-      <div class="emr--modal-backdrop" data-emr-target="#emr--modal--Merch 1 shirt"></div>
-      <div class="emr--inner-modal">
-      <img src="Merch 1 shirt.jpg" />
-      <h3>Art shirts</h3>
-      
-      <span><span class=money>$30.00</span></span>
-      
-              <form method="post" action="cart.html" id="product_form_Merch 1 shirt" accept-charset="UTF-8" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
-                <select name="id" id="ProductSelect-Merch 1 shirt" class="product-single__variants">
-                       
-                      <option  selected="selected"  data-sku="" value="45938534318246">S - <span class=money>$30.00 USD</span></option>
-                                                      
-                      <option  data-sku="" value="45938534351014">M - <span class=money>$30.00 USD</span></option>                                    
-                       
-                      <option  data-sku="" value="45938534383782">L - <span class=money>$30.00 USD</span></option>
+
+
+   <!-- merch section -->
+    <div class="merch-block">
+
+   <!--hoodies-->
+   <div class="item">
+   <img src="Img/Ctrl + Slay hoodie.jpg" alt="faith_hoodie">
+   <h3>Ctrl + Slay hoodie</h3>
    
-    
-                      <option  data-sku="" value="45938534416550">XL - <span class=money>$30.00 USD</span></option>
-    
-    
-                      <option  data-sku="" value="45938534449318">XXL - <span class=money>$30.00 USD</span></option>
-    
-                    
-                  
-                </select>
-    
-                <div class="product-single__quantity is-hidden">
-                  <label for="Quantity">Quantity</label>
-                  <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
-                </div>
-    
-                <button type="button" onclick="addToCart('Art Shirt', 30.00)" name="add" id="AddToCart-Merch1Shirt" class="btn ">
-                  <span id="AddToCartText">Add to Cart</span>
-              </button>
-                
-              <input type="hidden" name="product-id" value="Merch 1 shirt" /><input type="hidden" name="section-id" value="featured-collection" /></form>
-      
-      <a class="btn btn--tertiary emr--modal-close" data-emr-target="#emr--modal--Merch 1 shirt"></a>
-    </div>
-    </div>
-    </div>
-    <!--End of shirt1-->
-    <div class="emr--modal-backdrop" data-emr-target="#emr--modal--CYLB2"></div>
-    <div class="emr--CYLB2">
-    <img src="CYLB2.png" />
-    <h3>Close your laptop banner</h3>
-    
-    <span><span class=money>$30.00</span></span>
-    
-            <form method="post" action="cart.html" id="product_form_CYLB2" accept-charset="UTF-8" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
-              <select name="id" id="ProductSelect-CYLB2" class="product-single__variants">
-                     
-                    <option  selected="selected"  data-sku="" value="45938534318246">S - <span class=money>$30.00 USD</span></option>
-                                                    
-                    <option  data-sku="" value="45938534351014">M - <span class=money>$30.00 USD</span></option>                                    
-                     
-                    <option  data-sku="" value="45938534383782">L - <span class=money>$30.00 USD</span></option>
- 
-  
-                    <option  data-sku="" value="45938534416550">XL - <span class=money>$30.00 USD</span></option>
-  
-  
-                    <option  data-sku="" value="45938534449318">XXL - <span class=money>$30.00 USD</span></option>
-  
-                  
-                
-              </select>
-  
-              <div class="product-single__quantity is-hidden">
-                <label for="Quantity">Quantity</label>
-                <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
-              </div>
-  
-              <button type="button" onclick="addToCart('Close Your Laptop Banner', 30.00)" name="add" id="AddToCart-CYLB2" class="btn">
-               <span id="AddToCartText">Add to Cart</span>
-           </button>
-              
-            <input type="hidden" name="product-id" value="CYLB2" /><input type="hidden" name="section-id" value="featured-collection" /></form>
-    
-    <a class="btn btn--tertiary emr--modal-close" data-emr-target="#emr--modal--Merch 1 shirt"></a>
-  </div>
-  </div>
-  </div>
 
-  <noscript>
-   <img src="Tote bag.jpg" alt="Ice Cream T-shirt class="product__img">
- </noscript>
+   <span><span class=money>$30.00</span></span>
 
-</span>
+   <form method="post" action="cart.html" id="product_form_Merch1Hoodie" accept-charset="UTF-8" enctype="multipart/form-data">
+
+      <input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
+
+
+      <select name="id" id="ProductSelect-Merch1Hoodie" class="product-single__variants">
+
+         <option selected="selected" data-sku="" value="45938534318246">S - <span class=money>$30.00 USD</span></option>
+
+         <option data-sku="" value="45938534351014">M - <span class=money>$30.00 USD</span></option>
+
+         <option data-sku="" value="45938534383782">L - <span class=money>$30.00 USD</span></option>
+
+
+         <option data-sku="" value="45938534416550">XL - <span class=money>$30.00 USD</span></option>
+
+
+         <option data-sku="" value="45938534449318">XXL - <span class=money>$30.00 USD</span></option>
 
 
 
- 
- 
+      </select>
 
-</p>
+   
 
-</a>
-<a class="btn emr--modal-trigger" data-emr-target="#emr--modal--Tote bag"><span class="icon icon-cart header-bar__cart-icon" aria-hidden="true"></span></a>
-<div id="emr--modal--Tote bag" class="emr--modal">
-<div class="emr--modal-backdrop" data-emr-target="#emr--modal--Tote bag"></div>
-<div class="emr--inner-modal">
-<img src="Tote bag.jpg" />
-<h3>Tote Bag</h3>
+      <!-- Quantity Input -->
+      <div class="product-single__quantity is-hidden">
 
-<span><span class=money>$30.00</span></span>
+         <label for="Quantity">Quantity</label>
+         <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
+      </div>
 
- <form method="post" action="cart.html" id="product_form_Tote bag" accept-charset="UTF-8" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
-   <select name="id" id="ProductSelect-Tote bag" class="product-single__variants">
+
      
-       
-
-         <option  selected="selected"  data-sku="" value="45938534318246">S - <span class=money>$30.00 USD</span></option>
-
-         <option  data-sku="" value="45938534351014">M - <span class=money>$30.00 USD</span></option>
-
-         <option  data-sku="" value="45938534383782">L - <span class=money>$30.00 USD</span></option>
-
-
-         <option  data-sku="" value="45938534416550">XL - <span class=money>$30.00 USD</span></option>
-
-         <option  data-sku="" value="45938534449318">XXL - <span class=money>$30.00 USD</span></option>
-
-   </select>
-
-   <div class="product-single__quantity is-hidden">
-     <label for="Quantity">Quantity</label>
-     <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
-   </div>
-
-   <button type="submit" name="add" id="AddToCart-Tote bag" class="btn ">
-     <span id="AddToCartText">Add to Cart</span>
-   </button>
+      <!-- add to cart  button -->
+      <button type="button" onclick="addToCart('Ctrl + Slay hoodie', 30.00, 'Img/Ctrl + Slay hoodie.jpg')" name="add" id="AddToCart-CYLB1" class="btn">
+         <span id="AddToCartText">Add to Cart</span>
+      </button>
+     
    
- <input type="hidden" name="product-id" value="Tote bag" /><input type="hidden" name="section-id" value="featured-collection" /></form>
 
-<a class="btn btn--tertiary emr--modal-close" data-emr-target="#emr--modal--Tote bag"></a>
-   </body>
+      <input type="hidden" name="product-id" value="CYLB2" /><input type="hidden" name="section-id"
+         value="featured-collection" />
+   </form>
+   </div>
+   <!--End of hoodie-->
+
+
+
+
+   <!-- Mug section -->
+   <div class="item">
+      <div class="hoodie label">
+   <img src="Img/faith_mug.jpg" />
+   <h3>Ctrl + Slay Coffee and Tea Mug</h3>
+      </div>
+
+   <span><span class=money>$30.00</span></span>
+
+   <form method="post" action="cart.html" id="product_form_CYLB2" accept-charset="UTF-8" enctype="multipart/form-data">
+      <input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
+    
+
+      <div class="product-single__quantity is-hidden">
+         <label for="Quantity">Quantity</label>
+         <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
+      </div>
+
+
+
+      <button type="button" onclick="addToCart('Ctrl + Slay Coffee and Tea Mug', 30.00, 'Img/faith_mug.jpg')" name="add" id="AddToCart-CYLB2" class="btn">
+         <span id="AddToCartText">Add to Cart</span>
+      </button>
+
+      <input type="hidden" name="product-id" value="CYLB2" /><input type="hidden" name="section-id"
+         value="featured-collection" />
+   
+   </form>
+
+   </div>
+<!-- end of mug -->
+
+
+
+
+   <!-- tote bag -->
+
+   <div class="item">
+   <img src="Img/totebag_meme.jpg" alt="Tote Bag">
+   <h3>Tote Bag</h3>
+
+   <span><span class=money>$30.00</span></span>
+
+   <form method="post" action="cart.html" id="product_form_Tote bag" accept-charset="UTF-8" enctype="multipart/form-data">
+
+      <input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
+
+
+      <select name="id" id="ProductSelect-Tote bag" class="product-single__variants">
+         <option selected="selected" data-sku="" value="45938534318246">S - <span class=money>$30.00 USD</span></option>
+
+         <option data-sku="" value="45938534351014">M - <span class=money>$30.00 USD</span></option>
+
+         <option data-sku="" value="45938534383782">L - <span class=money>$30.00 USD</span></option>
+
+
+         <option data-sku="" value="45938534416550">XL - <span class=money>$30.00 USD</span></option>
+
+         <option data-sku="" value="45938534449318">XXL - <span class=money>$30.00 USD</span></option>
+      </select>
+
+
+      <div class="product-single__quantity is-hidden">
+         <label for="Quantity">Quantity</label>
+         <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
+      </div>
+
+
+      <button type="button" onclick="addToCart('Tote Bag', 30.00, 'Img/totebag_meme.jpg')" name="add" id="AddToCart-CYLB3" class="btn">
+
+         <span id="AddToCartText">Add to Cart</span>
+      </button>
+      
+
+      <input type="hidden" name="product-id" value="CYLB2"/><input type="hidden" name="section-id"
+         value="featured-collection" />
+   </form>
+   </div>
+<!-- end of tote bag -->
+
+
+
+   <!-- Coming Soon -->
+      <div class="item coming-soon">
+         <h3>More Coming Soon!</h3>
+         <p><3</p>
+      </div>
+   </div> 
+
+
+   <!-- footer -->
+   <footer>
+      <p class="text-footer background">
+      &copy; 2024 BeyondBradley - FAITH BRADLEY OFFICIAL STORE
+      </p>
+   </footer>
+   <script src="script.js"></script>
+</body>
+
 </html>

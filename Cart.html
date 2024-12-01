@@ -2,73 +2,63 @@
 Author: Meagan -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart_style.css">
 </head>
+
 <body>
-    <!-- <header> -->
+
+    <!-- navigation bar -->
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo"><img src="Img/SP.png" alt="logo"></div>
+            <li><a href="Main.html">Home</a></li>
+            <li><a href="Merch.html">Merch</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+            <li><a href="Checkout.html">Checkout</a></li>
+            <li> <a href="FAQs.html">FAQs</a></li>
+        </ul>
+
+
+        <div class="rightNav">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+
+    </nav>
+    <!-- end of navigation bar -->
+
+    <div class="cart-container">
+
         <h1>Your Shopping Cart</h1>
-        <nav class="navbar background">
-            <ul class="nav-list">
-               <div class="logo"><img src="Img/SP.png" alt="logo"></div>
-               <li><a href="Main.html">Home</a></li>
-               <li><a href="Merch.html">Merch</a></li>
-               <li> <a href="FAQs.html">FAQs</a></li>
-               <li><a href="Cart.html">Cart</a></li>
-               <li><a href="Checkout.html">Checkout</a></li>
-            </ul>
-      
-            <div class="rightNav">
-               <input type="text" name="search" id="search">
-               <button class="btn btn-sm">Search</button>
-            </div>
-      
-         </nav>
 
-         <section class="lowerbody" id="cartSection">
-            
-            <div id="cartContents">Cart content</div>
-            
-            <div id="cartTotal">cart total
-            </div>
-         </section>
+        <div id="cartContents" class="cart-contents">
+            <!-- Cart items will load here -->
+        </div>
 
+        <div id="cartTotal" class="cart total">
+            <!-- Total price will display here -->
 
-         
-         <!-- <section class="background firstSection">
-            <div class="box-main">
-               <div class="firstHalf">
-                
-      
-                     </div>
-                     <div class="secondHalf">
-                       <img src="Img/prof2.jpg" alt="professor aesthetic image">  -->
-<!--            
-                    </div>
-      
-               </div> -->
-               <!-- <div class="secondHalf">
-                   <img src="Img/prof2.jpg" alt="professor aesthetic image"> 
-      
-               </div> -->
-      
-            <!-- </div>
-      
-         </section> --> 
+        </div>
+        <!-- Checkout Button -->
+        <div class="checkout-btn-container">
+            <a href="Checkout.html">
+                <button class="btn checkout-btn">Proceed to Checkout</button>
+            </a>
+        </div>
 
-
-    <!-- </header> -->
-
-    <!-- <section id="cartSection">
-        <div id="cartContents">Cart content</div>
-        
-        <div id="cartTotal">cart total
-        </div> -->
-    </section>
-
+    </div>
+    <footer>
+        <p class="text-footer background">
+            &copy; 2024 BeyondBradley - FAITH BRADLEY OFFICIAL STORE
+        </p>
+    </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
